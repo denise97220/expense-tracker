@@ -13,8 +13,11 @@ const recordSchema = new Schema({
     type: String, 
     required: true
   },
+  categoryIcon: {
+    type: String,
+  },
   date: {
-    type: String, 
+    type: Date, 
     required: true
   },
   amount: {
@@ -24,6 +27,6 @@ const recordSchema = new Schema({
 
 })
 
-module.exports = mongoose.model("Record", todoSchema)
+module.exports = mongoose.model("Record", recordSchema)
 
 

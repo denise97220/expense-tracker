@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 1px;
+    /* border: solid 1px; */
     margin-top: 180px;
     padding-left: 150px;
 }
@@ -17,7 +17,7 @@
 }
 
 .buttons {
-    border: solid 1px;
+    /* border: solid 1px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,6 +33,7 @@
     color: white;
     text-align: center;
     padding: 25px;
+    border-bottom: solid black 5px;
 }
 
 .title h1 {

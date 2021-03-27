@@ -1,0 +1,46 @@
+<head>
+<link rel="stylesheet" href="/stylesheets/income.css">
+</head>
+
+<div class="container">
+    {{!-- 記帳列表 --}}
+    <div class="income_container">
+        <div class="title">
+            <h1>新增收入</h1>
+        </div>
+        <div class="list"></div>
+            <form class="income_form" action="">
+                <div class="form_name">
+                    <label for="name">名稱：</label>
+                    <input name="name" id="name" type="text" maxlength="20" placeholder="發薪水 ..." style="display: inline;" required>
+                </div>
+                <div class="form_date">
+                    <label for="date">日期：</label>
+                    <input name="date" id="date" type="date" min="2021-01-01" max="2021-12-31" style="display: inline;" required>
+                </div>
+                <div class="form_category">
+                    <label for="title">類別：</label>
+                    <input list="titles" class="form-control" name="current-title" id="title" style="display: inline;" required>
+                    <datalist id="titles">
+                        <option>前端工程師</option>
+                        <option>後端工程師</option>
+                        <option>全端工程師</option>
+                        <option>資料庫管理師</option>
+                        <option>維運技術人員</option>
+                        <option>專案經理</option>
+                    </datalist>
+                </div>
+                <div class="form_amount">
+                    <label for="amount">金額：</label>
+                    <input name="amount" id="amount" type="number" maxlength="20" placeholder="70000 ..." style="display: inline;" required>
+                </div>
+                
+                <button class="submit" type="submit">送出</button>
+            </form>
+                <button class="back" type="submit">
+                    <a href="/">返回</a>
+                </button>
+        </div>
+    </div>
+</div>
+
