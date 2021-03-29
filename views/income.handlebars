@@ -9,7 +9,7 @@
             <h1>新增收入</h1>
         </div>
         <div class="list"></div>
-            <form class="income_form" action="">
+            <form class="income_form" action="/expense-tracker/new-income" method="POST" >
                 <div class="form_name">
                     <label for="name">名稱：</label>
                     <input name="name" id="name" type="text" maxlength="20" placeholder="發薪水 ..." style="display: inline;" required>
@@ -20,14 +20,9 @@
                 </div>
                 <div class="form_category">
                     <label for="title">類別：</label>
-                    <input list="titles" class="form-control" name="current-title" id="title" style="display: inline;" required>
+                    <input list="titles" class="form-control" name="current-title" id="title" value="收入" style="display: inline;" required>
                     <datalist id="titles">
-                        <option>前端工程師</option>
-                        <option>後端工程師</option>
-                        <option>全端工程師</option>
-                        <option>資料庫管理師</option>
-                        <option>維運技術人員</option>
-                        <option>專案經理</option>
+                        <option>收入</option>
                     </datalist>
                 </div>
                 <div class="form_amount">

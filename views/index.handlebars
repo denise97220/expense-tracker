@@ -12,87 +12,23 @@
         <div class="total">TOTAL:  10800 $</div>
         <div class="list">
             <ul class="index-ul">
+                {{#each records}}
                 <li class="index-list">
-                    <i class="fas fa-grin-beam"></i>
-                    <h2>遊牧人生</h2>
-                    <h2 class="price">280 $</h2>
+                    <i class="{{this.categoryIcon}}"></i>
+                    <h2>{{this.name}}</h2>
+                    <h2 class="price">{{this.amount}} $</h2>
                     <div class="list-right">
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
+                        <a href="./expense-tracker/{{this._id}}/edit">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <form action="/expense-tracker/{{this._id}}?_method=DELETE" method="POST">
+                            <button class="btn-delete" type="submit">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </form>
                     </div>
                 </li>
-                <li class="index-list">
-                    <i class="fas fa-grin-beam"></i>
-                    <h2>遊牧人生</h2>
-                    <h2 class="price">280 $</h2>
-                    <div class="list-right">
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </li>
-                <li class="index-list">
-                    <i class="fas fa-grin-beam"></i>
-                    <h2>遊牧人生</h2>
-                    <h2 class="price">280 $</h2>
-                    <div class="list-right">
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </li>
-                <li class="index-list">
-                    <i class="fas fa-grin-beam"></i>
-                    <h2>遊牧人生</h2>
-                    <h2 class="price">280 $</h2>
-                    <div class="list-right">
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </li>
-                <li class="index-list">
-                    <i class="fas fa-grin-beam"></i>
-                    <h2>遊牧人生</h2>
-                    <h2 class="price">280 $</h2>
-                    <div class="list-right">
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </li>
-                <li class="index-list">
-                    <i class="fas fa-grin-beam"></i>
-                    <h2>遊牧人生</h2>
-                    <h2 class="price">280 $</h2>
-                    <div class="list-right">
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </li>
-                <li class="index-list">
-                    <i class="fas fa-grin-beam"></i>
-                    <h2>中樂頭</h2>
-                    <h2 class="price">18280 $</h2>
-                    <div class="list-right">
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </li>
-                <li class="index-list">
-                    <i class="fas fa-grin-beam"></i>
-                    <h2>遊牧人生</h2>
-                    <h2 class="price">280 $</h2>
-                    <div class="list-right">
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </li>
-                <li class="index-list">
-                    <i class="fas fa-grin-beam"></i>
-                    <h2>遊牧人生</h2>
-                    <h2 class="price">280 $</h2>
-                    <div class="list-right">
-                        <i class="fas fa-edit"></i>
-                        <i class="fas fa-trash-alt"></i>
-                    </div>
-                </li>
+                {{/each}}
             </ul>
         </div>
     </div>
@@ -100,27 +36,44 @@
     {{!-- 右邊按鈕 --}}
     <div class="buttons">
         <div class="button-up">
-            <div class="date"></div>
-            <div class="category">
+            <div class="date">
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    <button class="btn dropdown-toggle btn-date" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Dropdown button
+                        日期
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <input type="submit" value="家居物業" class="dropdown-item text-secondary" name="category">
+                        <input type="submit" value="交通出行" class="dropdown-item text-secondary" name="category">
+                        <input type="submit" value="休閒娛樂" class="dropdown-item text-secondary" name="category">
+                        <input type="submit" value="餐飲食品" class="dropdown-item text-secondary" name="category">
+                        <input type="submit" value="其他" class="dropdown-item text-secondary" name="category">
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle btn-category" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        類別
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <input type="submit" value="家居物業" class="dropdown-item text-secondary" name="category">
+                        <input type="submit" value="交通出行" class="dropdown-item text-secondary" name="category">
+                        <input type="submit" value="休閒娛樂" class="dropdown-item text-secondary" name="category">
+                        <input type="submit" value="餐飲食品" class="dropdown-item text-secondary" name="category">
+                        <input type="submit" value="收入" class="dropdown-item text-secondary" name="category">
+                        <input type="submit" value="其他" class="dropdown-item text-secondary" name="category">
                     </div>
                 </div>
             </div>
         </div>
         <div class="button-down">
             <div class="button-income">
-                <a href="/expense_tracker/new_income">收入</a>
+                <a class="a-income" href="/expense-tracker/new-income">收入</a>
             </div>
             <div class="button-expense">
-                <a href="">支出</a>
+                <a class="a-expense" href="">支出</a>
             </div>
         </div>
     </div>

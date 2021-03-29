@@ -1,5 +1,6 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
+
 const recordSchema = new Schema({
   name: {
     type: String, 
@@ -11,14 +12,15 @@ const recordSchema = new Schema({
   },
   category: {
     type: String, 
-    required: true
+    // required: true
   },
   categoryIcon: {
     type: String,
   },
   date: {
     type: Date, 
-    required: true
+    required: true,
+    default: Date.now
   },
   amount: {
     type: Number, 
