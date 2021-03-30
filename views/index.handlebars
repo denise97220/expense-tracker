@@ -18,7 +18,7 @@
                     <h2>{{this.name}}</h2>
                     <h2 class="price">{{this.amount}} $</h2>
                     <div class="list-right">
-                        <a href="./expense-tracker/{{this._id}}/edit">
+                        <a href="/expense-tracker/{{this._id}}/edit">
                             <i class="fas fa-edit"></i>
                         </a>
                         <form action="/expense-tracker/{{this._id}}?_method=DELETE" method="POST">
@@ -51,10 +51,10 @@
                     </div>
                 </div>
             </div>
-            <div class="category">
+            <div class="btn-category">
                 <form action="/expense-tracker/filterByCategory" method="POST">
-                    <label class="form-label" for="category">類別</label>
-                    <input class="form-control" list="categorys" name="category" placeholder="category" id="category" maxlength="10"
+                    <label class="form-label" for="category"></label>
+                    <input class="form-control btn-category-inner" list="categorys" name="category" placeholder="類別" id="category" maxlength="10"
                         required>
                     <datalist id="categorys">
                         <option>家居物業</option>
@@ -71,7 +71,7 @@
             <div class="button-add">
                 <a class="a-add" href="/expense-tracker/new">新增</a>
             </div>
-            <div class="button-add">
+            <div class="button-back">
                 <a class="a-add" href="/">返回</a>
             </div>
         </div>

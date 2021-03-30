@@ -12,15 +12,15 @@
             <form class="income_form" action="/expense-tracker/new" method="POST" >
                 <div class="form_name">
                     <label for="name">名稱：</label>
-                    <input name="name" id="name" type="text" maxlength="20" placeholder="發薪水 ..." style="display: inline;" required>
+                    <input name="name" id="name" type="text" maxlength="20" placeholder="發薪水" style="display: inline;" required>
                 </div>
                 <div class="form_date">
                     <label for="date">日期：</label>
-                    <input name="date" id="date" type="date" min="2021-01-01" max="2021-12-31" style="display: inline;" required>
+                    <input name="date" id="date" type="date" min="2021-01-01"  max="2021-12-31" placeholder="2021/3/1" style="display: inline;" required>
                 </div>
                 <div class="form_category">
-                    <label class="form-label" for="category">類別</label>
-                    <input class="form-control" list="categorys" name="category" placeholder="category" id="category" maxlength="10"
+                    <label class="form-label" for="category">類別：</label>
+                    <input class="form-control" list="categorys" name="category" placeholder="類別" id="category" style="display: inline;"
                         required>
                     <datalist id="categorys">
                         <option>家居物業</option>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="form_amount">
                     <label for="amount">金額：</label>
-                    <input name="amount" id="amount" type="number" maxlength="20" placeholder="70000 ..." style="display: inline;" required>
+                    <input name="amount" id="amount" type="number" maxlength="20" placeholder="70000" style="display: inline;" required>
                 </div>
                 
                 <button class="submit" type="submit">送出</button>

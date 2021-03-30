@@ -108,7 +108,7 @@ i {
     width: 45px;
 }
 
-.btn-category, .btn-date {
+.btn-date {
     background-color: #FFC954;
     border-radius: 0;
     border: solid 5px;
@@ -119,17 +119,21 @@ i {
     margin-left: 40px;
 }
 
-.btn-category {
-    background-color: #FF3D4A;
-    margin-top: 30px;
+.btn-category-inner {
+    background-color: #FFC954;
+    border: solid 5px;
+    width: 50%;
+    height: 100px;
+    font-size: 50px;
+    font-weight: 500;
+    margin-left: 40px;
 }
 
-.btn-category::after, .btn-date::after {
+.btn-date::after {
     margin-left: -5px;
 }
 
-
-.button-add {
+.button-add, .button-back {
     width: 50%;
     height: 100px;
     border: solid 5px;
@@ -137,8 +141,11 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10px;
     background-color: rgba(255, 61, 74, 0.9);
+}
+
+.button-add {
+    margin-bottom: 20px;
 }
 
 .a-add {

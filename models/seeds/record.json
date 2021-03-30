@@ -5,7 +5,7 @@
       "income": false,
       "category": "休閒娛樂",
       "categoryIcon": "far fa-smile-wink",
-      "date": "2021-03-20 00:00:00.000Z",
+      "date": "2021-03-20",
       "amount": 280
     },
     {
@@ -13,7 +13,7 @@
       "income": false,
       "category": "交通出行",
       "categoryIcon": "fas fa-bus",
-      "date": "2021-03-21 00:00:00.000Z",
+      "date": "2021-03-21",
       "amount": 760
     },
     {
@@ -21,7 +21,7 @@
       "income": true,
       "category": "收入",
       "categoryIcon": "fas fa-money-check-alt",
-      "date": "2021-03-26 00:00:00.000Z",
+      "date": "2021-03-26",
       "amount": 100000
     },
     {
@@ -29,7 +29,7 @@
       "income": false,
       "category": "餐飲食品",
       "categoryIcon": "fas fa-utensils",
-      "date": "2021-03-29 00:00:00.000Z",
+      "date": "2021-03-29",
       "amount": 140
     },
     {
@@ -37,7 +37,7 @@
       "income": false,
       "category": "家居物業",
       "categoryIcon": "fas fa-home",
-      "date": "2021-03-29 00:00:00.000Z",
+      "date": "2021-03-29",
       "amount": 7990
     },
     {
@@ -45,7 +45,7 @@
       "income": false,
       "category": "其他",
       "categoryIcon": "fas fa-pen",
-      "date": "2021-03-24 00:00:00.000Z",
+      "date": "2021-03-24",
       "amount": 280
     },
     {
@@ -53,7 +53,7 @@
       "income": true,
       "category": "收入",
       "categoryIcon": "fas fa-money-check-alt",
-      "date": "2021-03-25 00:00:00.000Z",
+      "date": "2021-03-25",
       "amount": 6666
     }
   ]
