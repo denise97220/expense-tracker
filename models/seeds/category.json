@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "category": "休閒娛樂",
+      "categoryIcon": "far fa-smile-wink"
+    },
+    {
+      "category": "交通出行",
+      "categoryIcon": "fas fa-bus"
+    },
+    {
+      "category": "收入",
+      "categoryIcon": "fas fa-money-check-alt"
+    },
+    {
+      "category": "餐飲食品",
+      "categoryIcon": "fas fa-utensils"
+    },
+    {
+      "category": "家居物業",
+      "categoryIcon": "fas fa-home"
+    },
+    {
+      "category": "其他",
+      "categoryIcon": "fas fa-pen"
+    }
+  ]
+}

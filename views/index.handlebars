@@ -9,7 +9,7 @@
         <div class="title">
             <h1>冰島旅遊基金</h1>
         </div>
-        <div class="total">TOTAL:  10800 $</div>
+        <div class="total">TOTAL:  {{total}} $</div>
         <div class="list">
             <ul class="index-ul">
                 {{#each records}}
@@ -52,28 +52,27 @@
                 </div>
             </div>
             <div class="category">
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle btn-category" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        類別
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <input type="submit" value="家居物業" class="dropdown-item text-secondary" name="category">
-                        <input type="submit" value="交通出行" class="dropdown-item text-secondary" name="category">
-                        <input type="submit" value="休閒娛樂" class="dropdown-item text-secondary" name="category">
-                        <input type="submit" value="餐飲食品" class="dropdown-item text-secondary" name="category">
-                        <input type="submit" value="收入" class="dropdown-item text-secondary" name="category">
-                        <input type="submit" value="其他" class="dropdown-item text-secondary" name="category">
-                    </div>
-                </div>
+                <form action="/expense-tracker/filterByCategory" method="POST">
+                    <label class="form-label" for="category">類別</label>
+                    <input class="form-control" list="categorys" name="category" placeholder="category" id="category" maxlength="10"
+                        required>
+                    <datalist id="categorys">
+                        <option>家居物業</option>
+                        <option>交通出行</option>
+                        <option>休閒娛樂</option>
+                        <option>餐飲食品</option>
+                        <option>其他</option>
+                        <option>收入</option>
+                    </datalist>
+                </form>
             </div>
         </div>
         <div class="button-down">
-            <div class="button-income">
-                <a class="a-income" href="/expense-tracker/new-income">收入</a>
+            <div class="button-add">
+                <a class="a-add" href="/expense-tracker/new">新增</a>
             </div>
-            <div class="button-expense">
-                <a class="a-expense" href="">支出</a>
+            <div class="button-add">
+                <a class="a-add" href="/">返回</a>
             </div>
         </div>
     </div>

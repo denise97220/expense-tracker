@@ -1,17 +1,26 @@
 const express = require("express")
 const router = express.Router()
 const Record = require("../../models/record")
+const Category = require("../../models/category")
 
-router.get("/new-income", (req,res) => {
-    res.render("income")
+router.get("/new", (req,res) => {
+    res.render("new")
 })
 
-router.post("/new-income", (req,res) => {
+router.post("/new", (req,res) => {
     const {name, date, category, amount} = req.body
+    let categoryIcon = ""
+    Category.find({category: { $regex: `${req.body.category}`, $options: "i" }})
+            .lean()
+            .then(record => {
+                categoryIcon = record[0].categoryIcon
+            })
+
     Record.create({
         name: name,
         date: date,
         category: category,
+        categoryIcon: categoryIcon,
         amount: amount
     })
         .then(res.redirect("/"))

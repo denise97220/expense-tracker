@@ -129,7 +129,7 @@ i {
 }
 
 
-.button-income, .button-expense {
+.button-add {
     width: 50%;
     height: 100px;
     border: solid 5px;
@@ -138,19 +138,10 @@ i {
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
+    background-color: rgba(255, 61, 74, 0.9);
 }
 
-.button-income {
-    background-color: #FFC954;
-    color: black;
-}
-
-.button-expense {
-    background-color: #FF3D4A;
-    margin-top: 30px;
-}
-
-.a-income, .a-expense {
+.a-add {
     text-decoration:none;
     font-size: 50px;
     font-weight: 500;
@@ -159,10 +150,4 @@ i {
 
 a:link, a:visited {
     color: black;
-}
-
-.a-income::before, .a-expense::before {
-    content: "+";
-    font-size: 60px;
-    margin-right: 5px;
 }
