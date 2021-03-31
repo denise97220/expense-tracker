@@ -36,26 +36,25 @@
     {{!-- 右邊按鈕 --}}
     <div class="buttons">
         <div class="button-up">
-            <div class="date">
-                <div class="dropdown">
-                    <button class="btn dropdown-toggle btn-date" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        日期
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <input type="submit" value="家居物業" class="dropdown-item text-secondary" name="category">
-                        <input type="submit" value="交通出行" class="dropdown-item text-secondary" name="category">
-                        <input type="submit" value="休閒娛樂" class="dropdown-item text-secondary" name="category">
-                        <input type="submit" value="餐飲食品" class="dropdown-item text-secondary" name="category">
-                        <input type="submit" value="其他" class="dropdown-item text-secondary" name="category">
-                    </div>
-                </div>
+            <div class="btn-date">
+                <form action="/expense-tracker/filterByDate" method="POST">
+                    <label class="form-label" for="date"></label>
+                    <input class="form-control btn-date-inner" list="date" name="date" placeholder="日期" id="date"
+                        maxlength="10" required>
+                    <datalist id="dates">
+                        <option>家居物業</option>
+                        <option>交通出行</option>
+                        <option>休閒娛樂</option>
+                        <option>餐飲食品</option>
+                        <option>其他</option>
+                        <option>收入</option>
+                    </datalist>
+                </form>
             </div>
             <div class="btn-category">
                 <form action="/expense-tracker/filterByCategory" method="POST">
                     <label class="form-label" for="category"></label>
-                    <input class="form-control btn-category-inner" list="categorys" name="category" placeholder="類別" id="category" maxlength="10"
-                        required>
+                    <input class="form-control btn-category-inner" list="categorys" name="category" placeholder="類別" id="category" required>
                     <datalist id="categorys">
                         <option>家居物業</option>
                         <option>交通出行</option>

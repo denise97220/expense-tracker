@@ -9,22 +9,20 @@ router.get("/new", (req,res) => {
 
 router.post("/new", (req,res) => {
     const {name, date, category, amount} = req.body
-    let categoryIcon = ""
     Category.find({category: { $regex: `${req.body.category}`, $options: "i" }})
             .lean()
             .then(record => {
-                categoryIcon = record[0].categoryIcon
+                let categoryIcon = record[0].categoryIcon
+                Record.create({
+                    name: name,
+                    date: date,
+                    category: category,
+                    categoryIcon: categoryIcon,
+                    amount: amount
+                })
             })
-
-    Record.create({
-        name: name,
-        date: date,
-        category: category,
-        categoryIcon: categoryIcon,
-        amount: amount
-    })
-        .then(res.redirect("/"))
-        .catch(error => console.log(error))
+            .then(res.redirect("/"))
+            .catch(error => console.log(error))
 })
 
 
@@ -61,4 +59,3 @@ router.delete("/:id", (req,res) => {
 })
 
 module.exports = router
-

@@ -1,16 +1,16 @@
 .container {
-    width: 100%;
+    width: 150%;
     height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
     /* border: solid 1px; */
     margin-top: 200px;
-    padding-left: 150px;
+    padding-left: 200px;
 }
 
 .expense-tracker {
-    width: 65%;
+    width: 110%;
     height: 100%;
     border: solid 5px;
     background-color: rgba(243, 243, 243, 0.8);
@@ -22,7 +22,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: space-between;
-    width: 35%;
+    width: 40%;
     height: 100%;
 }
 
@@ -45,14 +45,14 @@
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 80px;
+    margin-left: 120px;
 }
 
 .list {
     display: flex;
     justify-content: center;
     width: 110%;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-bottom: 20px;
     margin-top: -15px;
 }
@@ -108,33 +108,22 @@ i {
     width: 45px;
 }
 
-.btn-date {
+.btn-category-inner, .btn-date-inner {
     background-color: #FFC954;
-    border-radius: 0;
     border: solid 5px;
-    width: 50%;
+    width: 80%;
     height: 100px;
     font-size: 50px;
     font-weight: 500;
     margin-left: 40px;
 }
 
-.btn-category-inner {
-    background-color: #FFC954;
-    border: solid 5px;
-    width: 50%;
-    height: 100px;
-    font-size: 50px;
-    font-weight: 500;
-    margin-left: 40px;
-}
-
-.btn-date::after {
-    margin-left: -5px;
+.btn-date-inner {
+    margin-top: -24px;
 }
 
 .button-add, .button-back {
-    width: 50%;
+    width: 80%;
     height: 100px;
     border: solid 5px;
     margin-left: 40px;
@@ -150,11 +139,20 @@ i {
 
 .a-add {
     text-decoration:none;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
     text-align: center;
 }
 
 a:link, a:visited {
     color: black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.form-control {
+    font-size: 40px;
+    text-align: center;
 }

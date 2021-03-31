@@ -6,6 +6,7 @@
     align-items: flex-start;
     /* border: solid 1px; */
     margin-top: 180px;
+    padding-left: 80px;
 }
 
 .income_container {
@@ -68,7 +69,7 @@ input, .form-control {
 }
 
 a {
-    text-decoration:none;
+    text-decoration: none;
     font-size: 50px;
     font-weight: 500;
     text-align: center;
@@ -76,6 +77,10 @@ a {
 
 a:link, a:visited {
     color: black;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .back {
