@@ -15,4 +15,6 @@ db.once("open", () => {
     })
   }
   console.log("done")
+}).then(() => {
+  return db.close()
 })

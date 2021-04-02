@@ -12,7 +12,7 @@
 .expense-tracker {
     width: 110%;
     height: 100%;
-    border: solid 5px;
+    border: solid 5px black;
     background-color: rgba(243, 243, 243, 0.8);
 }
 
@@ -108,18 +108,18 @@ i {
     width: 45px;
 }
 
-.btn-category-inner, .btn-date-inner {
+.btn-category {
+    margin-top: -25px;
+}
+
+.btn-category-inner {
     background-color: #FFC954;
-    border: solid 5px;
+    border: solid 5px black;
     width: 80%;
     height: 100px;
     font-size: 50px;
     font-weight: 500;
     margin-left: 40px;
-}
-
-.btn-date-inner {
-    margin-top: -24px;
 }
 
 .button-add, .button-back {
@@ -155,4 +155,9 @@ a:hover {
 .form-control {
     font-size: 40px;
     text-align: center;
+}
+
+
+.btn-category>form>input::placeholder { 
+  color: black;
 }

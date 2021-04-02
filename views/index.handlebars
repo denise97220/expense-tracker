@@ -36,21 +36,6 @@
     {{!-- 右邊按鈕 --}}
     <div class="buttons">
         <div class="button-up">
-            <div class="btn-date">
-                <form action="/expense-tracker/filterByDate" method="POST">
-                    <label class="form-label" for="date"></label>
-                    <input class="form-control btn-date-inner" list="date" name="date" placeholder="日期" id="date"
-                        maxlength="10" required>
-                    <datalist id="dates">
-                        <option>家居物業</option>
-                        <option>交通出行</option>
-                        <option>休閒娛樂</option>
-                        <option>餐飲食品</option>
-                        <option>其他</option>
-                        <option>收入</option>
-                    </datalist>
-                </form>
-            </div>
             <div class="btn-category">
                 <form action="/expense-tracker/filterByCategory" method="POST">
                     <label class="form-label" for="category"></label>
