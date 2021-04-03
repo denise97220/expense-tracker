@@ -1,20 +1,19 @@
 const db = require("../../config/mongoose")
 const Record = require("../record")
-const recordJSON = require("./record.json").records
+
 
 db.once("open", () => {
-  console.log("mongodb connected!")
-  for (let i = 0; i < recordJSON.length; i++) {
-    Record.create({
-      name: recordJSON[i].name,
-      income: recordJSON[i].income,
-      category: recordJSON[i].category,
-      categoryIcon: recordJSON[i].categoryIcon,
-      date: recordJSON[i].date,
-      amount: recordJSON[i].amount,
+  Record.create(
+    { name: "遊牧人生", income: false, category: "休閒娛樂", categoryIcon: "far fa-smile-wink", date: "2021-03-20", amount: 280 },
+    { name: "高鐵票", income: false, category: "交通出行", categoryIcon: "fas fa-bus", date: "2021-03-21", amount: 760 },
+    { name: "領薪水", income: true, category: "收入", categoryIcon: "fas fa-money-check-alt", date: "2021-03-24", amount: 100000 },
+    { name: "星巴克", income: false, category: "餐飲食品", categoryIcon: "fas fa-utensils", date: "2021-03-27", amount: 140 },
+    { name: "電腦螢幕", income: false, category: "家居物業", categoryIcon: "fas fa-home", date: "2021-03-29", amount: 7990 },
+    { name: "書", income: false, category: "其他", categoryIcon: "fas fa-pen", date: "2021-03-24", amount: 250 },
+    { name: "中樂透", income: true, category: "收入", categoryIcon: "fas fa-money-check-alt", date: "2021-03-30", amount: 6666 }
+  )
+    .then(() => {
+      console.log("done")
+      db.close()
     })
-  }
-  console.log("done")
-}).then(() => {
-  return db.close()
 })
