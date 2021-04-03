@@ -9,11 +9,11 @@ db.once("open", () => {
     promise.push(
       Record.create({
         name: recordJSON[i].name,
-      income: recordJSON[i].income,
-      category: recordJSON[i].category,
-      categoryIcon: recordJSON[i].categoryIcon,
-      date: recordJSON[i].date,
-      amount: recordJSON[i].amount
+        income: recordJSON[i].income,
+        category: recordJSON[i].category,
+        categoryIcon: recordJSON[i].categoryIcon,
+        date: recordJSON[i].date,
+        amount: recordJSON[i].amount
       })
     )
   }
